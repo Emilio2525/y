@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Python: Guía Completa</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #343a40;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffc107;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #ffc107;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: rgba(255, 193, 7, 0.2);
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-left: 5px solid #28a745;
+            background: #f1f3f5;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #28a745;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 10px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #343a40;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .video {
+            flex: 1 1 30%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Aprende Python: Guía Completa</h1>
+        <nav>
+            <a href="#introduccion">Introducción</a>
+            <a href="#variables">Variables y Tipos de Datos</a>
+            <a href="#control-flujo">Control de Flujo</a>
+            <a href="#funciones">Funciones</a>
+            <a href="#juegos">Cómo Hacer un Juego</a>
+            <a href="#avanzado">Temas Avanzados</a>
+            <a href="#videos">Video Tutoriales</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="section" id="introduccion">
+            <h2>Introducción a Python</h2>
+            <p>Python es un lenguaje de programación de alto nivel, conocido por su facilidad de lectura y escritura. Se utiliza en diversos campos, incluyendo desarrollo web, análisis de datos, inteligencia artificial y más. Python es un lenguaje interpretado, lo que significa que no necesita ser compilado para ejecutarse, facilitando así el desarrollo rápido de aplicaciones.</p>
+        </div>
+
+        <div class="section" id="variables">
+            <h2>Variables y Tipos de Datos</h2>
+            <p>Las variables en Python se utilizan para almacenar información. No es necesario declarar el tipo de variable, ya que Python es un lenguaje dinámico.</p>
+            <h3>Ejemplos de Tipos de Datos</h3>
+            <pre>
+nombre = "Juan"               # Cadena de texto
+edad = 30                     # Entero
+altura = 1.75                 # Flotante
+es_estudiante = True          # Booleano
+            </pre>
+            <p>Python tiene varios tipos de datos, incluyendo:</p>
+            <ul>
+                <li><strong>Cadenas</strong>: Texto encerrado en comillas.</li>
+                <li><strong>Enteros</strong>: Números enteros.</li>
+                <li><strong>Flotantes</strong>: Números decimales.</li>
+                <li><strong>Booleanos</strong>: Verdadero o falso.</li>
+                <li><strong>Listas</strong>: Colecciones ordenadas de elementos.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="control-flujo">
+            <h2>Control de Flujo</h2>
+            <p>Las estructuras de control de flujo permiten que tu programa tome decisiones y repita acciones. Esto incluye instrucciones condicionales y bucles.</p>
+            <h3>Instrucciones Condicionales</h3>
+            <pre>
+if edad >= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")
+            </pre>
+            <h3>Bucles</h3>
+            <p>Los bucles permiten repetir un bloque de código varias veces. Los dos tipos más comunes son <code>for</code> y <code>while</code>.</p>
+            <pre>
+for i in range(5):
+    print(i)  # Imprime números del 0 al 4
+
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+            </pre>
+        </div>
+
+        <div class="section" id="funciones">
+            <h2>Funciones</h2>
+            <p>Las funciones son bloques de código reutilizables que realizan una tarea específica. Puedes definir tus propias funciones y también usar las integradas en Python.</p>
+            <h3>Definición de Funciones</h3>
+            <pre>
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+print(saludar("Mundo"))  # Salida: Hola, Mundo!
+            </pre>
+            <p>Las funciones pueden aceptar parámetros y devolver valores. Puedes crear funciones que tomen múltiples parámetros:</p>
+            <pre>
+def suma(a, b):
+    return a + b
+
+resultado = suma(5, 3)
+print(resultado)  # Salida: 8
+            </pre>
+        </div>
+
+        <div class="section" id="juegos">
+            <h2>Cómo Hacer un Juego en Python</h2>
+            <p>Crear un juego simple en Python puede ser una forma divertida de aprender el lenguaje. A continuación, veremos un ejemplo básico de un juego de adivinanza de números.</p>
+            <h3>Ejemplo: Juego de Adivinanza</h3>
+            <p>En este juego, la computadora selecciona un número aleatorio y el jugador debe adivinarlo. Aquí tienes el código:</p>
+            <pre>
+import random
+
+def juego_adivinanza():
+    numero_secreto = random.randint(1, 100)
+    intentos = 0
+    adivinado = False
+
+    print("¡Bienvenido al juego de adivinanza!")
+    print("Adivina un número entre 1 y 100.")
+
+    while not adivinado:
+        intento = int(input("Introduce tu número: "))
+        intentos += 1
+
+        if intento < numero_secreto:
+            print("Demasiado bajo. Intenta de nuevo.")
+        elif intento > numero_secreto:
+            print("Demasiado alto. Intenta de nuevo.")
+        else:
+            adivinado = True
+            print(f"¡Felicidades! Adivinaste el número en {intentos} intentos.")
+
+juego_adivinanza()
+            </pre>
+            <p>Este juego utiliza la biblioteca <code>random</code> para seleccionar un número secreto y permite al jugador realizar intentos hasta que adivine correctamente.</p>
+        </div>
+
+        <div class="section" id="avanzado">
+            <h2>Temas Avanzados en Python</h2>
+            <h3>Programación Orientada a Objetos</h3>
+            <p>Python soporta la programación orientada a objetos (POO), lo que permite crear clases y objetos para organizar tu código.</p>
+            <pre>
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def saludar(self):
+        return f"Hola, soy {self.nombre} y tengo {self.edad} años."
+
+p = Persona("Ana", 25)
+print(p.saludar())  # Salida: Hola, soy Ana y tengo 25 años.
+            </pre>
+
+            <h3>Uso de Bibliotecas</h3>
+            <p>Python tiene una gran cantidad de bibliotecas que amplían su funcionalidad. Puedes importar bibliotecas estándar como <code>math</code> y <code>datetime</code>, o instalar bibliotecas de terceros.</p>
+            <pre>
+import math
+
+print(math.sqrt(16))  # Salida: 4.0
+            </pre>
+        </div>
+
+        <div class="section" id="videos">
+            <h2>Video Tutoriales</h2>
+            <div class="video-container">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/IimBRwHhW54" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/TbNvJYLbu4E" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/tCEWR_QQOfA" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2024 Aprende Python: Guía Completa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
